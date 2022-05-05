@@ -1,9 +1,5 @@
 <x-app-layout>
-    <div class="container">
-    <div class="button">
-        <a href="{{route('blog')}}" class="btn btn-success">Anasayfa</a>
-        </div>
-    </div>
+
 
     <div class="container mt-4">
         <div class="row">

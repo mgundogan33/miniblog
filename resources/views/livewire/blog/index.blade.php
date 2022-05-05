@@ -5,12 +5,12 @@
 
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Hızlı Blog Ara..." wire:model="search" />
-            @if ($search != '')
+
                 <button wire:click="clear" class="btn btn-outline-primary" type="button" id="button-addon2"
                     data-mdb-ripple-color="dark">
                     Ara
                 </button>
-            @endif
+
         </div>
         <div class="row">
             @foreach ($blogs as $blog)

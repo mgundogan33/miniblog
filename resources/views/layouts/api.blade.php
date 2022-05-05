@@ -66,9 +66,11 @@
                         <!-- Icons -->
                         <li class="nav-item me-3 me-lg-0">
                             @auth
-                                <a class="nav-link" href="{{ route('dashboard') }}" rel="nofollow">
-                                   <strong >Admin</strong>
-                                </a>
+                            <a class="nav-link" href="{{ route('dashboard') }}" rel="nofollow">
+                                <span class="inline-flex rounded-md">
+                                {{ Auth::user()->name }}
+                                </span>
+                            </a>
                             @else
                                 <a class="nav-link" href="{{ route('login') }}" rel="nofollow">
                                     <strong>Giriş</strong>
