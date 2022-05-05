@@ -16,7 +16,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{$blog->title}}</h5>
                         <p class="card-text">
-                            {{$blog->text}}
+                            {{Str::limit($blog->text,90,'...')}}
                         </p>
                         <a href="{{route('detayBlog',$blog->id)}}" class="btn btn-primary">Detay</a>
                     </div>

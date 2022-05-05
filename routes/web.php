@@ -22,6 +22,8 @@ Route::get('/', function () {
 Route::get('/index',[BlogController::class,'index'])->name('blog' );
 Route::get('/detay/{idBlog}',[BlogController::class,'detay'])->name('detayBlog');
 
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
