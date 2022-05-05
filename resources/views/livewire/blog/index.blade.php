@@ -8,7 +8,7 @@
             <div class="col-lg-4 col-md-12 mb-4">
                 <div class="card">
                     <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                        <img src="{{$blog->photo}}" class="img-fluid" />
+                        <img src="{{Storage::url($blog->photo)}}" class="img-fluid" />
                         <a href="{{route('detayBlog',$blog->id)}}">
                             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                         </a>

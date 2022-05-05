@@ -7,27 +7,24 @@ use Livewire\Component;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 
+
 class Create extends Component
 {
-
     use WithFileUploads;
-    public $photo, $title, $text;
-
-
+    public $title, $text, $photo;
     public function render()
     {
-
         return view('livewire.blog.create');
     }
     public function kaydet()
     {
         $this->validate([
-            'photo' => 'image|max:1024', // 1MB Max
             'title' => 'required',
-            'text' => 'required'
+            'text' => 'required',
+            'photo' => 'image|min:1',
         ]);
+        $path = $this->photo->store('public/blogs');
 
-        $path =  $this->photo->store('public/blogs');
         $blog = new Blog();
         $blog->title = $this->title;
         $blog->text = $this->text;
@@ -40,8 +37,8 @@ class Create extends Component
     public function clear()
     {
 
-        $this->photo = '';
         $this->title = '';
         $this->text = '';
+        $this->photo = '';
     }
 }
