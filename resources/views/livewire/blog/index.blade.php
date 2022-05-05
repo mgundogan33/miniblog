@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                         <img src="{{$blog->photo}}" class="img-fluid" />
-                        <a href="#!">
+                        <a href="{{route('detayBlog',$blog->id)}}">
                             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                         </a>
                     </div>
@@ -18,7 +18,7 @@
                         <p class="card-text">
                             {{$blog->text}}
                         </p>
-                        <a href="#!" class="btn btn-primary">Detay</a>
+                        <a href="{{route('detayBlog',$blog->id)}}" class="btn btn-primary">Detay</a>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,10 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('blog');
 
+Route::get('/index',[BlogController::class,'index'])->name('blog' );
+Route::get('/detay/{idBlog}',[BlogController::class,'detay'])->name('detayBlog');
 
 Route::middleware([
     'auth:sanctum',
